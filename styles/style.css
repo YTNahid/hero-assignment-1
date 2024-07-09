@@ -388,3 +388,7 @@ footer .heading {
     font-size: 20px;
     font-weight: 600;
 }
+
+footer a {
+    line-height: 0;
+}
