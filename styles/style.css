@@ -168,7 +168,7 @@ header .logo-text {
 .hero {
     justify-content: center;
     background: url(../assets/Hero-bg.png);
-    min-height: 800px;
+    min-height: 750px;
 }
 
 .hero > .column {
@@ -311,7 +311,7 @@ header .logo-text {
 
 /* I Need Support Section */
 .support {
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 
 .support > .column {
@@ -354,8 +354,37 @@ header .logo-text {
 .support form input[type='submit'] {
     font-size: 20px;
     font-weight: 600;
-    padding: 16px 20px;
+    padding: 17px 20px;
+    background-color: white;
     border: 1px solid rgba(13, 19, 33, 0.15);
     border-radius: 8px;
     cursor: pointer;
+    margin-left: 8px;
+}
+
+.support form input[type='submit']:hover {
+    opacity: 0.7;
+}
+
+/* 
+ * Footer CSS ---------
+ */
+footer {
+    background: rgba(13, 19, 33, 0.03);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer .row {
+    align-items: center;
+}
+
+footer .icons-container {
+    justify-content: end;
+    gap: 25px;
+}
+
+footer .heading {
+    font-size: 20px;
+    font-weight: 600;
 }
