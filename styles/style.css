@@ -2,7 +2,7 @@
 ========================================================================== */
 /*
  * Global Fonts and Colors ---------
- * Font: "Azeret Mono", monospace
+ * Font: 'Azeret Mono', monospace
  * Primary Color: #0D1321
  * Text Color: #0D1321
  * Others:
@@ -10,20 +10,26 @@
 
 :root {
     --content-width: 1140px;
-    --gap: 30px;
+    --gap: 20px;
     --column-padding: 10px;
 
     --primary-color: #0d1321;
     --text-color: #0d1321;
+
+    --primary-font: 'Azeret Mono', monospace;
 }
 
 /* Global CSS Style
 ========================================================================== */
 * {
     transition: all 0.2s;
-    font-family: 'Azeret Mono', monospace;
+    font-family: var(--primary-font);
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
 }
 
 /*
@@ -43,12 +49,9 @@ h2.heading {
     font-size: 32px;
 }
 
-.sub-heading {
-    color: var(--primary-color);
-    font-size: 15px;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin: 0;
+h3.heading {
+    font-size: 24px;
+    opacity: 0.7;
 }
 
 p {
@@ -82,6 +85,7 @@ ul {
 .button-white:hover {
     background: black;
     color: white;
+    opacity: 1;
 }
 
 .button-black {
@@ -94,13 +98,27 @@ ul {
     color: var(--text-color);
 }
 
+.button-square {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: 1px solid var(--text-color);
+    opacity: 0.7;
+    cursor: pointer;
+}
+.button-square:hover {
+    background: black;
+    color: white;
+    opacity: 1;
+}
+
 /*
  * Sections and columns Structure ---------
  */
 .section {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .row {
@@ -147,13 +165,15 @@ header .logo-text {
 
 /* Hero Section */
 .hero {
+    justify-content: center;
     background: url(../assets/Hero-bg.png);
-    min-height: 85vh;
+    min-height: 800px;
 }
 
 .hero > .column {
     justify-content: center;
     align-items: center;
+    gap: 30px;
 }
 
 .hero .hero-img {
@@ -172,4 +192,59 @@ header .logo-text {
 
 .hero button {
     margin-top: 10px;
+}
+
+/* Why Web Dev && My Inspiration Section */
+.why-web {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 900px;
+    margin: auto;
+    gap: 100px;
+}
+
+.why-web .intro,
+.inspiration .intro {
+    align-items: center;
+}
+.why-web .intro .heading,
+.inspiration .intro .heading {
+    text-align: center;
+}
+.why-web .intro p,
+.inspiration .intro p {
+    text-align: center;
+    max-width: 852px;
+}
+
+.why-web .about {
+    gap: 40px;
+}
+
+.why-web .about .col-1.detail {
+    width: 70%;
+}
+.why-web .about .col-2.img-container {
+    width: 30%;
+}
+
+.why-web .about p {
+    max-width: 468px;
+}
+
+.why-web .about button {
+    margin-top: 10px;
+}
+
+.why-web .about img {
+    width: 260px;
+    align-self: end;
+}
+
+.why-web .about-reverse {
+    flex-direction: row-reverse;
+}
+
+.why-web .about-reverse img {
+    align-self: start;
 }
