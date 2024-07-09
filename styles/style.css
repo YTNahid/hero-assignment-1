@@ -1,0 +1,98 @@
+/* Roots
+========================================================================== */
+/*
+ * Global Fonts and Colors ---------
+ * Font: 'Roboto', sans-serif
+ * Primary Color: #0D1321
+ * Text Color: #0D1321
+ * Others:
+ */
+
+:root {
+    --content-width: 1140px;
+    --gap: 20px;
+    --column-padding: 10px;
+
+    --primary-color: #0d1321;
+    --text-color: #0d1321;
+}
+
+/* Global CSS Style
+========================================================================== */
+* {
+    transition: all 0.2s;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*
+ * Text Styles ---------
+*/
+.heading {
+    color: var(--text-color);
+    line-height: 1.2em;
+    margin: 0;
+}
+
+h1.heading {
+    font-size: 48px;
+}
+
+h2.heading {
+    font-size: 32px;
+}
+
+.sub-heading {
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+}
+
+/*
+ * Sections and columns Structure ---------
+ */
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.row-full {
+    max-width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: initial;
+    width: 100%;
+    max-width: var(--content-width);
+    gap: var(--gap);
+    padding: var(--column-padding);
+}
