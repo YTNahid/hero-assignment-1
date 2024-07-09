@@ -51,7 +51,6 @@ h2.heading {
 
 h3.heading {
     font-size: 24px;
-    opacity: 0.7;
 }
 
 p {
@@ -119,6 +118,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--gap);
 }
 
 .row {
@@ -194,27 +194,27 @@ header .logo-text {
     margin-top: 10px;
 }
 
-/* Why Web Dev && My Inspiration Section */
+/* Global Intro Section Layout */
+.intro {
+    align-items: center;
+}
+
+.intro .heading {
+    text-align: center;
+}
+
+.intro p {
+    text-align: center;
+    max-width: 852px;
+}
+
+/* Why Web Dev Section */
 .why-web {
     padding-top: 100px;
     padding-bottom: 100px;
     max-width: 900px;
     margin: auto;
     gap: 100px;
-}
-
-.why-web .intro,
-.inspiration .intro {
-    align-items: center;
-}
-.why-web .intro .heading,
-.inspiration .intro .heading {
-    text-align: center;
-}
-.why-web .intro p,
-.inspiration .intro p {
-    text-align: center;
-    max-width: 852px;
 }
 
 .why-web .about {
@@ -226,6 +226,10 @@ header .logo-text {
 }
 .why-web .about .col-2.img-container {
     width: 30%;
+}
+
+.why-web .about .heading {
+    opacity: 0.7;
 }
 
 .why-web .about p {
@@ -249,6 +253,8 @@ header .logo-text {
     align-self: start;
 }
 
+/* My Inspiration Section */
+
 .inspiration {
     padding-bottom: 100px;
 }
@@ -257,11 +263,47 @@ header .logo-text {
     border: 1px solid rgba(13, 19, 33, 0.2);
     border-radius: 16px;
     padding: 32px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .inspiration .video-container iframe {
     width: 100%;
     height: 610px;
     border-radius: 16px;
+}
+
+/* My Current Target Section */
+.targets {
+    padding-bottom: 100px;
+}
+
+.targets .targets-container {
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.targets .targets-container img {
+    width: 56px;
+}
+
+.targets .targets-container a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.targets .targets-container > .column {
+    padding: 40px;
+    border-radius: 16px;
+}
+
+.targets .targets-container .html {
+    background: rgba(255, 76, 30, 0.05);
+}
+
+.targets .targets-container .css {
+    background: rgba(0, 76, 232, 0.05);
+}
+
+.targets .targets-container .js {
+    background: rgba(255, 223, 0, 0.05);
 }
